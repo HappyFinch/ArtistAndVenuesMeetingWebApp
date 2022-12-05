@@ -3,22 +3,23 @@
 {% block content %}
   <div class="form-wrapper">
     <form method="post" class="form">
-      <h3 class="form-heading">List a new show</h3>
+      {{ form.csrf_token() }}
+      <h3 class="form-heading">创建新的<strong>show</strong></h3>
       <div class="form-group">
-        <label for="artist_id">Artist ID</label>
-        <small>ID can be found on the Artist's Page</small>
+        <label for="artist_id">音乐人ID</label>
+        <small>ID可以在音乐人详情页找到</small>
         {{ form.artist_id(class_ = 'form-control', autofocus = true) }}
       </div>
       <div class="form-group">
         <label for="venue_id">Venue ID</label>
-        <small>ID can be found on the Venue's Page</small>
+        <small>ID可以在音乐场馆详情页面找到</small>
         {{ form.venue_id(class_ = 'form-control', autofocus = true) }}
       </div>
       <div class="form-group">
-          <label for="start_time">Start Time</label>
+          <label for="start_time">演出时间</label>
           {{ form.start_time(class_ = 'form-control', placeholder='YYYY-MM-DD HH:MM', autofocus = true) }}
         </div>
-      <input type="submit" value="Create Venue" class="btn btn-primary btn-lg btn-block">
+      <input type="submit" value="创建演出" class="btn btn-primary btn-lg btn-block">
     </form>
   </div>
 {% endblock %}
