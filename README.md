@@ -32,12 +32,12 @@ Fyyur是一个音乐场馆和音乐人预订网站，有助于发现和预订当
 
   ```sh
   ├── README.md
-  ├── app.py *** the main driver of the app. Includes your SQLAlchemy models.
-                    "python app.py" to run after installing dependencies
-  ├── config.py *** Database URLs, CSRF generation, etc
+  ├── app.py *** 应用程序的主要驱动程序 
+  ├── config.py *** 数据库配置等
   ├── error.log
-  ├── forms.py *** Your forms
-  ├── requirements.txt *** The dependencies we need to install with "pip3 install -r requirements.txt"
+  ├── forms.py *** 
+  ├── models.py  *** SQLAlchemy 模型
+  ├── requirements.txt ***所需要的库 命令行运行："pip install -r requirements.txt"
   ├── static
   │   ├── css 
   │   ├── font
